@@ -1,69 +1,104 @@
 <!-- Unit 11 Project
 Requirements
-[  ] $() Select by Element, ID AND Class 
-[  ] Use Three Different jQuery Methods 
-[  ] Add Five CSS Declarations
-[  ] Include Three Images
+[x] $() Select by Element, ID AND Class 
+[x] Use Three Different jQuery Methods 
+[x] Add Five CSS Declarations
+[x] Include Three Images
 
 Select ONE Additional 
-[ no ] Feature 1 - Use .hide() & .show() method
-[ no ] Feature 2 - Use .addClass() method
-[ no ] Feature 3 - Use .slideDown() method
-[ no ] Feature 4 - Use .mouseover() method
-[ no ] Feature 5 - Use .fadeIn() method
+[ ] Feature 1 - Use .hide() & .show() method
+[ ] Feature 2 - Use .addClass() method
+[ ] Feature 3 - Use .slideDown() method
+[ ] Feature 4 - Use .mouseover() method
+[x] Feature 5 - Use .fadeIn() method
 -->
 
 <!DOCTYPE html>
 <html>
   <head>
     <meta charset="utf-8" />
-    <title>Unit 11 Project</title>
+    <title>My Favorite Albums!</title>
     <link href="style.css" rel="stylesheet" type="text/css" />
   </head>
   <body>
-    <button id="mem1-button">Memory #1</button>
-    <button id="mem2-button">Memory #2</button>
-    <button id="mem3-button">Memory #3</button>
-    <h1>My Top 3 Albums <span>Of All Time</span></h1>
+    <h1>My Top 3 Albums <span>Of All Time 🎵</span></h1>
+    
+    <button id="mem1-button" class="memory-button">Click For Memory #1</button>
+    <button id="mem2-button" class="memory-button">Click For Memory #2</button>
+    <button id="mem3-button" class="memory-button">Click For Memory #3</button>
+
     <ol>
-      <li>
+      <li class="album-card">
+        <img id="album-img-1" src="https://upload.wikimedia.org/wikipedia/en/thumb/3/3b/Steviewonder_innervisions.jpg/250px-Steviewonder_innervisions.jpg" alt="Innervisions Album">
         <h3 id="mem1">Innervisions</h3>
-        <p>More about this memory.</p>
+        <p id="desc1">MUST LISTEN.</p>
+        <div id="memory1" class="memory-box"></div>
       </li>
 
-      <li>
-        <h3 id="mem2">Memory #2</h3>
-        <p>More about this memory.</p>
+      <li class="album-card">
+        <img id="album-img-2" src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQ9y_46o_hL3AYvcX9mXI0VMUq4i_wuQWDQqw&s" alt="Tawk Tommohawk Album">
+        <h3 id="mem2">Tawk Tommohawk</h3>
+        <p id="desc2">Wonky but so cool.</p>
+        <div id="memory2" class="memory-box"></div>
       </li>
 
-      <li>
-        <h3 id="mem3">Memory #3</h3>
-        <p>More about this memory</p>
+      <li class="album-card">
+        <img id="album-img-3" src="https://runforcoverrecords.com/cdn/shop/products/rfc014_2.jpg?v=1678901394" alt="The Last Thing You Forget Album">
+        <h3 id="mem3">The Last Thing You Forget</h3>
+        <p id="desc3">you can just tell they were hungry.</p>
+        <div id="memory3" class="memory-box"></div>
       </li>
     </ol>
 
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.4/jquery.min.js"></script>
     <script>
 
-      // ======================== Button #1
+      
+      // fortniet
       $("#mem1-button").click(function () {
+        // colorhcange
         $("#mem1").css("color", "purple");
+        
+        // .text()
+        $("#memory1").text("This Album changed my life");
+        
+        //.fadeIn()
+      
+        $("#memory1").fadeIn(1000);
       });
 
-      // ======================== Button #2
+    
       $("#mem2-button").click(function () {
+        //.css() 
         $("#mem2").css("color", "blue");
+        
+        //.html()
+        $("#memory2").html("This album has some of the richest harmonies and melodies anyone will ever hear.");
+        
+      
+        $("#memory2").fadeIn(1000);
       });
 
-      // ======================== Button #3
+     
       $("#mem3-button").click(function () {
+        
         $("#mem3").css("color", "green");
-        $("#mem3").text("Coding Parties! 🎉");
+        
+       
+        $("#desc3").attr("data-memory", "This album is just absolutely electric");
+        
+      
+        $("#memory3").html(" This album is just absolutely electric");
+        
+       
+        $("#memory3").fadeIn(1000);
       });
 
+      
+      $(".memory-box").fadeIn(500);
 
     </script>
   </body>
 </html>
 
-<!--- Taken From Khan Academy HTML/JS: Making webpages interactive with jQuery-->
+<!--- Taken From Khan Academy HTML/JS: Making webpages interactive with jQuery -->

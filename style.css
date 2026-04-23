@@ -1,12 +1,58 @@
 @import url("https://fonts.googleapis.com/css2?family=Akaya+Kanadaka&family=Delius&family=Poetsen+One&display=swap");
 
-/* ======================== CSS Rule #1 */
-html {
-  background-color: white;
-  padding-left: 20px;
+/* ======================== CSS Rule #1 - The body tag */
+body {
+  background-color: lightyellow;
+  padding: 20px;
+  font-family: "Delius", cursive;
 }
 
-/* ======================== CSS Rule #2 */
+/* ======================== CSS Rule #2 - The big heading */
 h1 {
   font-family: "Poetsen One", sans-serif;
+  text-align: center;
+  color: darkblue;
+  font-size: 40px;
+}
+
+/* ======================== CSS Rule #3 - The span inside h1 */
+h1 span {
+  color: hotpink;
+}
+
+/* ======================== CSS Rule #4 - The buttons (selected by CLASS) */
+.memory-button {
+  background-color: orange;
+  color: white;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 5px;
+  font-size: 16px;
+  cursor: pointer;
+  margin: 5px;
+}
+
+/* ======================== CSS Rule #5 - The album cards (selected by CLASS) */
+.album-card {
+  background-color: lightblue;
+  padding: 15px;
+  margin: 10px 0;
+  border-radius: 8px;
+  list-style: none;
+}
+
+/* Extra decorations */
+img {
+  width: 150px;
+  height: 150px;
+  border-radius: 10px;
+  margin-right: 10px;
+}
+
+.memory-box {
+  background-color: lightyellow;
+  padding: 10px;
+  margin-top: 10px;
+  border-left: 4px solid purple;
+  font-style: italic;
 }
